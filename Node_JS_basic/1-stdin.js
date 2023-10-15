@@ -4,9 +4,9 @@ console.log('Welcome to Holberton School, what is your name?');
 process.stdin.resume();
 
 process.stdin.on('readable', () => {
-  // read input convert to a string, trim leading or trailing whitespace
-  const name = process.stdin.read().toString().trim();
+  const name = process.stdin.read();
 
-  console.log(`Your name is: ${name}`);
-  console.log('This important software is now closing');
+  process.stdout.write(`Your name is: ${name}`);
+  process.stdout.write('This important software is now closing\n');
+  process.exit();
 });

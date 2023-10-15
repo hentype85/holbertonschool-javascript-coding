@@ -8,7 +8,7 @@ process.stdin.on('data', (data) => {
 
   process.stdout.write(`Your name is: ${name}`);
 
-  if(!process.stdin.isTTY) {
+  if (!process.stdin.isTTY) {
     process.stdout.write('This important software is now closing\n');
   }
 

@@ -1,19 +1,17 @@
 const fs = require('fs');
 
-function countStudents(path) {
+function countStudents (path) {
   try {
     const data = fs.readFileSync(path, 'utf8');
     const splittedData = data.split('\n');
 
     const students = {
       CS: [],
-      SWE: []
+      SWE: [],
     };
 
     splittedData.forEach((row) => {
-      // const [firstname, lastname, age, field] = row.split(',');
-      const [firstname, field] = row.split(',');
-
+      const [firstname, lastname, age, field] = row.split(',');
       if (field === 'CS') {
         students.CS.push(firstname);
       }

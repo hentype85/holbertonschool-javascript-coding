@@ -1,8 +1,8 @@
 # NodeJS Basics
 
-* Install Node 10
+* Install Node
 ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 sudo apt-get install -y nodejs
 node -v
 ```
